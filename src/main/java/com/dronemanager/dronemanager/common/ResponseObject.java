@@ -9,6 +9,10 @@ public class ResponseObject extends ResponseEntity<Object> {
 		this(message, payload, null);
 	}
 
+	public ResponseObject(final String message) {
+		this(message, null, null);
+	}
+
     public ResponseObject(final String message, final Object payload, final Long totalCount) {
 		super(new Payload(message, payload, totalCount), HttpStatus.OK);
 	}
